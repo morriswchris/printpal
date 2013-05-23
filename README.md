@@ -1,4 +1,10 @@
-printpal
-========
+PrintPal
 
-PrintPal is a python script to quickly pdf a website using wkhtmltopdf
+PrintPal is a website to pdf application which utilizes wkhtmltopdf:
+
+Available Commands:
+  -D <--domain>: Domain of website to print.
+	-P <--uri-path>: uri segment to use with domain
+	*-I <--uri-file>: file of uri segments to use with domain.
+  
+  *Coming Soon
