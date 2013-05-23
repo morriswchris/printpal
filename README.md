@@ -1,11 +1,11 @@
 PrintPal
 
 PrintPal is a website to pdf application which utilizes wkhtmltopdf:
-<code>
+
 Available Commands:
-  -D <--domain>: Domain of website to print.
+	-D <--domain>: Domain of website to print.
 	-P <--uri-path>: uri segment to use with domain
 	*-I <--uri-file>: file of uri segments to use with domain.
   
   *Coming Soon
-</code>
+
