@@ -3,7 +3,11 @@ PrintPal.py
 
 Automated Site PDF Creation 
 
-Commands
+PrintPal is an html to pdf CLI utility written in Python. Its purpose is to 
+easily take a domain with one or more urls and bundle each html page into one
+pdf document utilizing wkhtmltopdf <http://code.google.com/p/wkhtmltopdf/>. 
+    
+Usage
 ---------
 
 ```
@@ -24,6 +28,12 @@ Available Commands
 -I <--uri-file>: file of uri segments to use with domain ( newline delimited ).
 -O <--output>: Path where the file should be saved to.
 ```
+
+Version
+---------
+@Author:    Chris Morris http://github.com/morriswchris
+@Date:      July 24 2013
+@version:   1.0.0
 
 License
 -------
