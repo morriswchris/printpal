@@ -32,7 +32,7 @@ def get_links( page, page_content, link_list ):
         if link.has_attr('href') and len( link['href'].split(page) ) > 1:            
             linker = link['href'].split(page)[1]
             new_page = page+linker
-            if new_page not in link_list and '.html' in new_page:                
+            if new_page not in link_list :                
                 link_list.append( new_page )
                 print "found: :"+new_page
     return link_list
