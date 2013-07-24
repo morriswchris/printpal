@@ -1,5 +1,49 @@
 #!/usr/bin/env python
 
+'''
+    PrintPal
+    ---------
+    -> Automated Site PDF Creation
+    
+    PrintPal is an html to pdf CLI utility written in Python. Its purpose is to 
+    easily take a domain with one or more urls and bundle each html page into one
+    pdf document utilizing wkhtmltopdf <http://code.google.com/p/wkhtmltopdf/>. 
+    
+    **********************************************************************
+    
+    Usage
+    ------
+    
+    //create a simple page pdf of a site
+    $ python printpal.py -D example.com/index.html
+
+    //create a multi-page pdf of a site
+    $ python printpal.py -D example.com -I csv_urls
+
+    //create a pdf with a specified output
+    $python printpal.py -D example.com -O ~/Desktop/Sample.pdf
+    
+    **********************************************************************
+    
+    Available Commands
+    ------------------
+    
+    -D <--domain>: Domain of website to print.
+    -I <--uri-file>: file of uri segments to use with domain ( newline delimited ).
+    -O <--output>: Path where the file should be saved to.
+
+    
+    **********************************************************************
+    
+    @Author:    Chris Morris http://github.com/morriswchris
+    @Date:      July 24 2013
+    @version:   1.0.0
+    
+    Released under the MIT license
+'''
+
+
+
 #imports
 import os
 import sys
@@ -87,16 +131,50 @@ def usage( error_str ):
     if error_str != "":
         usage += "\nThere was an issue with your command. Please review you statment against our list on commands!:\n"
         usage += "\t*"
-        usage += str( error_str )
-
-    usage += "\n====================================================================\n"
-    usage += "\nPrintPal is a website to pdf application which utilizes wkhtmltopdf binary\n <http://code.google.com/p/wkhtmltopdf/>:\n"
-    usage += "\nAvailable Commands:\n"
-    usage += "\t-D <--domain>: Domain of website to print.\n"
-    usage += "\t-I <--uri-file>: file of uri segments to use with domain ( ne wline delimited ).\n"
-    usage += "\t-O <--output>: Path where the file should be saved to.\n"
-    usage += "\n====================================================================\n"
+        usage += str( error_str ) 
     print usage
+    print '''    
+    PrintPal
+    ---------
+    -> Automated Site PDF Creation
+    
+    PrintPal is an html to pdf CLI utility written in Python. Its purpose is to 
+    easily take a domain with one or more urls and bundle each html page into one
+    pdf document utilizing wkhtmltopdf <http://code.google.com/p/wkhtmltopdf/>. 
+    
+    **********************************************************************
+    
+    Usage
+    ------
+    
+    //create a simple page pdf of a site
+    $ python printpal.py -D example.com/index.html
+
+    //create a multi-page pdf of a site
+    $ python printpal.py -D example.com -I csv_urls
+
+    //create a pdf with a specified output
+    $python printpal.py -D example.com -O ~/Desktop/Sample.pdf
+    
+    **********************************************************************
+    
+    Available Commands
+    ------------------
+    
+    -D <--domain>: Domain of website to print.
+    -I <--uri-file>: file of uri segments to use with domain ( newline delimited ).
+    -O <--output>: Path where the file should be saved to.
+
+    
+    **********************************************************************
+    
+    @Author:    Chris Morris http://github.com/morriswchris
+    @Date:      July 24 2013
+    @version:   1.0.0
+    
+    Released under the MIT license 
+    
+    '''
     sys.exit(0)   
     
 
