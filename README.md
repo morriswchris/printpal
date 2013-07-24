@@ -31,9 +31,11 @@ Available Commands
 
 Version
 ---------
-@Author:    Chris Morris http://github.com/morriswchris
-@Date:      July 24 2013
-@version:   1.0.0
+Author:    Chris Morris http://github.com/morriswchris
+
+Date:      July 24 2013
+
+version:   1.0.0
 
 License
 -------
