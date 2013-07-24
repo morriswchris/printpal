@@ -12,16 +12,14 @@ import csv
 def main(argv):
     #maping table for commands
     map_commands = { 'D': 'domain'
-                   , 'P': 'uri-path'
                    , 'I': 'uri-file'
                    , 'O': 'output'
                    }
     #try getting arguments
     try:
         opts, args = getopt.getopt( argv
-                                  , "D:P:I:O: h"
+                                  , "D:I:O: h"
                                   , [ "domain="
-                                    , "uri-path="
                                     , "uri-file="
                                     , "output="
                                     ]
@@ -53,10 +51,6 @@ def main(argv):
 def pdf(options):
 	print options
         
-        #check to see if the user passed both a sigular uri and uri file
-        if options.get( 'uri-file', False ) and options.get( 'uri-path', False ):
-            usage( "cannot specify a uri and a uri file" )
-        
         #ensure we atleast have a domain
 	if not options.get('domain',False):
             usage( "please set a domain")
@@ -65,10 +59,6 @@ def pdf(options):
         if 'uri-file' in options:
             #get the uris from the file
             urls = urls_from_file( options.get( 'uri-file' ) )
-        
-        #make a single array of uris
-        if 'uri-path' in options:
-            urls = [ options.get( 'uri-path' ) ]
         
         cmd = "wkhtmltopdf "
         for url in urls:
@@ -103,7 +93,6 @@ def usage( error_str ):
     usage += "\nPrintPal is a website to pdf application which utilizes wkhtmltopdf binary\n <http://code.google.com/p/wkhtmltopdf/>:\n"
     usage += "\nAvailable Commands:\n"
     usage += "\t-D <--domain>: Domain of website to print.\n"
-    usage += "\t-P <--uri-path>: uri segment to use with domain\n"
     usage += "\t-I <--uri-file>: file of uri segments to use with domain ( ne wline delimited ).\n"
     usage += "\t-O <--output>: Path where the file should be saved to.\n"
     usage += "\n====================================================================\n"
