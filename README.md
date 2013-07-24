@@ -15,7 +15,7 @@ Usage
 $ python printpal.py -D example.com/index.html
 
 //create a multi-page pdf of a site
-$ python printpal.py -D example.com -I csv_urls
+$ python printpal.py -D example.com -I urls.txt
 
 //create a pdf with a specified output
 $python printpal.py -D example.com -O ~/Desktop/Sample.pdf
