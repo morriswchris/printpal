@@ -1,14 +1,32 @@
-PrintPal
+PrintPal.py
+==========
 
-PrintPal is a website to pdf application which utilizes wkhtmltopdf http://code.google.com/p/wkhtmltopdf/:
+Automated Site PDF Creation 
 
-Available Commands:
+Commands
+---------
 
-	-D <--domain>: Domain of website to print.
+```
+//create a simple page pdf of a site
+$ python printpal.py -D example.com/index.html
 
-	-P <--uri-path>: uri segment to use with domain
+//create a multi-page pdf of a site
+$ python printpal.py -D example.com -I csv_urls
 
-	*-I <--uri-file>: file of uri segments to use with domain.
- 
-  *Coming Soon
+//create a pdf with a specified output
+$python printpal.py -D example.com -O ~/Desktop/Sample.pdf
+```
+
+Available Commands
+--------------------
+```
+-D <--domain>: Domain of website to print.
+-I <--uri-file>: file of uri segments to use with domain ( newline delimited ).
+-O <--output>: Path where the file should be saved to.
+```
+
+License
+-------
+
+Released under the MIT license.
 
